@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ViewCourseComponent } from './view-course/view-course.component';
+import { FormsModule } from '@angular/forms';
 
 const myRoute:Routes=[
   {
     path:"",
     component:AddCourseComponent
+  },
+  {
+    path:"view",
+    component:ViewCourseComponent
   }
 ]
 
@@ -18,12 +24,14 @@ const myRoute:Routes=[
   declarations: [
     AppComponent,
     AddCourseComponent,
-    NavbarComponent
+    NavbarComponent,
+    ViewCourseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
