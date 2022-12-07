@@ -12,21 +12,27 @@
                 </div>
             </div>
             <div class="row g-3" *ngFor="let j of SearchCourse">
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Course Description</label>
-                    <input type="text" class="form-control" value="{{j.courseDescription}}">
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Course Venue</label>
-                    <input type="text" class="form-control" value="{{j.courseVenue}}">
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Course Duration</label>
-                    <input type="text" class="form-control" value="{{j.courseDuration}}">
-                </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <label for="" class="form-label">Course Date</label>
-                    <input type="text" class="form-control" value="{{j.courseDate}}">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Course Title</th>
+                            <th scope="col">CourseDescription</th>
+                            <th scope="col">Course Duration</th>
+                            <th scope="col">Course Date</th>
+                            <th scope="col">Course Venue</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let i of SearchCourse">
+                            <td>{{i.courseTitle}}</td>
+                            <td>{{i.courseDescription}}</td>
+                            <td>{{i.courseDuration}}</td>
+                            <td>{{i.courseDate}}</td>
+                            <td>{{i.courseVenue}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
             </div>
         </div>
