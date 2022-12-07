@@ -13,7 +13,13 @@ export class ApiService {
     return this.http.get("http://localhost:8080/view")
   }
   addCourse=(dataToSend:any)=>
-    {
-      return this.http.post("http://localhost:8080/add",dataToSend)
-    }
+  {
+    return this.http.post("http://localhost:8080/add",dataToSend)
+  }
+  searchCourse=(data:any)=>
+  {
+    return this.http.post("http://localhost:8080/search",data)
+  }
+
+
 }
